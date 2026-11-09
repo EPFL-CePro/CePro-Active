@@ -1,0 +1,31 @@
+# Dependabot opens pull requests to keep this repository's dependencies up to date.
+# Every merge into main goes live for all callers: review these PRs like any other change.
+version: 2
+
+updates:
+  # Actions used by the workflows (actions/checkout, astral-sh/setup-uv, ...)
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+    # Wait a week after a release before proposing it (lets bad releases get caught upstream)
+    cooldown:
+      default-days: 7
+    groups:
+      github-actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: "ci"
+
+  # Ansible toolchain (ansible-deploy/pyproject.toml + uv.lock)
+  - package-ecosystem: uv
+    directory: /ansible-deploy
+    schedule:
+      interval: daily
+    cooldown:
+      default-days: 7
+    groups:
+      ansible-deploy-toolchain:
+        patterns: ["*"]
+    commit-message:
+      prefix: "ansible-deploy"

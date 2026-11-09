@@ -12,3 +12,4 @@ dependencies = [
 [tool.uv]
 # Not a package: this project only describes an environment
 package = false
+exclude-newer = "7 days"
