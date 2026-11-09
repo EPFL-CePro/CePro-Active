@@ -72,10 +72,10 @@ jobs:
 
     steps:
       - name: Check out the Ansible config (the calling repo)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Check out the shared toolchain (ansible-deploy/pyproject.toml + uv.lock)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: EPFL-CePro/ansible-workflows
           ref: ${{ inputs.workflows_ref }}
@@ -83,7 +83,7 @@ jobs:
           sparse-checkout: ansible-deploy
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true
           cache-dependency-glob: .cepro-toolchain/ansible-deploy/uv.lock
