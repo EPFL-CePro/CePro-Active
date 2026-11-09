@@ -1,0 +1,14 @@
+[project]
+name = "cepro-ansible-toolchain"
+version = "1.0.0"
+description = "Pinned Ansible + Python toolchain shared by the CePro ops repositories and the reusable deploy workflow"
+# Python running the Ansible controller (CI and local)
+requires-python = "==3.14.*"
+dependencies = [
+    # Bump the minor line deliberately, after reading the porting guide
+    "ansible-core==2.22.0",
+]
+
+[tool.uv]
+# Not a package: this project only describes an environment
+package = false
