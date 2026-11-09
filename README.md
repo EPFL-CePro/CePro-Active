@@ -1,4 +1,4 @@
-# CEPRo-Active
+# CEPro-Active
 
 Shared GitHub Actions workflows for the CePro team.
 
