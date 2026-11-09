@@ -1,6 +1,6 @@
 # Reusable workflow: deploy an "ops" repository (Ansible configuration with secrets in keybase).
-# Lives in a central repo, e.g. EPFL-CePro/ansible-workflows, and is called with :
-#   uses: EPFL-CePro/ansible-workflows/.github/workflows/ansible-deploy.yml@v1
+# Lives in a central repo, e.g. EPFL-CePro/CePro-Active, and is called with :
+#   uses: EPFL-CePro/CePro-Active/.github/workflows/ansible-deploy.yml@v1
 name: CEPro Ansible deploy
 
 on:
@@ -19,7 +19,7 @@ on:
         type: string
         default: requirements.yml
       workflows_ref:
-        description: Ref of EPFL-CePro/ansible-workflows to take the toolchain from (keep in sync with the @ref in "uses:")
+        description: Ref of EPFL-CePro/CePro-Active to take the toolchain from (keep in sync with the @ref in "uses:")
         type: string
         default: v1
       keybase_dir:
@@ -77,7 +77,7 @@ jobs:
       - name: Check out the shared toolchain (ansible-deploy/pyproject.toml + uv.lock)
         uses: actions/checkout@v4
         with:
-          repository: EPFL-CePro/ansible-workflows
+          repository: EPFL-CePro/CePro-Active
           ref: ${{ inputs.workflows_ref }}
           path: .cepro-toolchain
           sparse-checkout: ansible-deploy
