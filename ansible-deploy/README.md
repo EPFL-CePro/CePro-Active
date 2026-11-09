@@ -41,7 +41,7 @@ on:
 
 jobs:
   deploy:
-    uses: EPFL-CePro/ansible-workflows/.github/workflows/ansible-deploy.yml@main
+    uses: EPFL-CePro/CePro-Active/.github/workflows/ansible-deploy.yml@main
     with:
       keybase_dir: /keybase/team/myapp
       tags: ${{ inputs.tags || 'myapp.run' }}

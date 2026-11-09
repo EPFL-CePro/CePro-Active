@@ -21,7 +21,7 @@ on:
       workflows_ref:
         description: Ref of EPFL-CePro/CePro-Active to take the toolchain from (keep in sync with the @ref in "uses:")
         type: string
-        default: v1
+        default: main
       keybase_dir:
         description: Keybase directory holding the secrets (e.g. /keybase/team/ceproject)
         type: string
