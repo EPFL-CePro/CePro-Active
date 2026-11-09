@@ -1,6 +1,6 @@
 # Reusable workflow: deploy an "ops" repository (Ansible configuration with secrets in keybase).
 # Lives in a central repo, e.g. EPFL-CePro/CePro-Active, and is called with :
-#   uses: EPFL-CePro/CePro-Active/.github/workflows/ansible-deploy.yml@v1
+#   uses: EPFL-CePro/CePro-Active/.github/workflows/ansible-deploy.yml@main
 name: CEPro Ansible deploy
 
 on:

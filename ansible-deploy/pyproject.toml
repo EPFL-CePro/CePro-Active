@@ -6,7 +6,7 @@ description = "Pinned Ansible + Python toolchain shared by the CePro ops reposit
 requires-python = "==3.14.*"
 dependencies = [
     # Bump the minor line deliberately, after reading the porting guide
-    "ansible-core==2.22.0",
+    "ansible-core==2.21.5",
 ]
 
 [tool.uv]
